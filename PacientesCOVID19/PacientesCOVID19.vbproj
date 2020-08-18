@@ -1,0 +1,398 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{21525BAF-5B61-40A6-85CB-BE745A44414D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>PacientesCOVID19.My.MyApplication</StartupObject>
+    <RootNamespace>PacientesCOVID19</RootNamespace>
+    <AssemblyName>PacientesCOVID19</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>PacientesCOVID19.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>PacientesCOVID19.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>COVID19_Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\EstadosAlta.Designer.vb">
+      <DependentUpon>EstadosAlta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\EstadosAlta.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\EstadosUsuario.Designer.vb">
+      <DependentUpon>EstadosUsuario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\EstadosUsuario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\MarcadoresInflamatorios.Designer.vb">
+      <DependentUpon>MarcadoresInflamatorios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\MarcadoresInflamatorios.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Sexos.Designer.vb">
+      <DependentUpon>Sexos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Sexos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Usuarios.Designer.vb">
+      <DependentUpon>Usuarios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Usuarios.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form_TMP.Designer.vb">
+      <DependentUpon>Form_TMP.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Form_TMP.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LogMarcadoresInflamatorios.Designer.vb">
+      <DependentUpon>LogMarcadoresInflamatorios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LogMarcadoresInflamatorios.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NuevoRegMarcadores.Designer.vb">
+      <DependentUpon>NuevoRegMarcadores.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NuevoRegMarcadores.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Pacientes.Designer.vb">
+      <DependentUpon>Pacientes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Pacientes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RegMarcadores.Designer.vb">
+      <DependentUpon>RegMarcadores.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RegMarcadores.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Reporte.Designer.vb">
+      <DependentUpon>Reporte.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Reporte.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PacientesCOVID191DataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PacientesCOVID191DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PacientesCOVID191DataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PacientesCOVID191DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PacientesCOVID191DataSet2.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PacientesCOVID191DataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Principal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Principal.Designer.vb">
+      <DependentUpon>Principal.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Seguridad\Login.Designer.vb">
+      <DependentUpon>Login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Seguridad\Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Seguridad\ResetPassword.Designer.vb">
+      <DependentUpon>ResetPassword.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Seguridad\ResetPassword.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Admin\EstadosAlta.resx">
+      <DependentUpon>EstadosAlta.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\EstadosUsuario.resx">
+      <DependentUpon>EstadosUsuario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\MarcadoresInflamatorios.resx">
+      <DependentUpon>MarcadoresInflamatorios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Sexos.resx">
+      <DependentUpon>Sexos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Usuarios.resx">
+      <DependentUpon>Usuarios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form_TMP.resx">
+      <DependentUpon>Form_TMP.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LogMarcadoresInflamatorios.resx">
+      <DependentUpon>LogMarcadoresInflamatorios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NuevoRegMarcadores.resx">
+      <DependentUpon>NuevoRegMarcadores.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Pacientes.resx">
+      <DependentUpon>Pacientes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RegMarcadores.resx">
+      <DependentUpon>RegMarcadores.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reporte.resx">
+      <DependentUpon>Reporte.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Principal.resx">
+      <DependentUpon>Principal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Seguridad\Login.resx">
+      <DependentUpon>Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Seguridad\ResetPassword.resx">
+      <DependentUpon>ResetPassword.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="PacientesCOVID191DataSet.xsc">
+      <DependentUpon>PacientesCOVID191DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PacientesCOVID191DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PacientesCOVID191DataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PacientesCOVID191DataSet.xss">
+      <DependentUpon>PacientesCOVID191DataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PacientesCOVID191DataSet1.xsc">
+      <DependentUpon>PacientesCOVID191DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="PacientesCOVID191DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PacientesCOVID191DataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PacientesCOVID191DataSet1.xss">
+      <DependentUpon>PacientesCOVID191DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="PacientesCOVID191DataSet2.xsc">
+      <DependentUpon>PacientesCOVID191DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="PacientesCOVID191DataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PacientesCOVID191DataSet2.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PacientesCOVID191DataSet2.xss">
+      <DependentUpon>PacientesCOVID191DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\add_16.png" />
+    <None Include="Resources\add_32.png" />
+    <None Include="Resources\edit_16.png" />
+    <None Include="Resources\edit_32.png" />
+    <None Include="Resources\delete_16.png" />
+    <None Include="Resources\delete_32.png" />
+    <None Include="Resources\addmarcador_32.png" />
+    <None Include="Resources\addmarcador_16.png" />
+    <None Include="Resources\agregar_mi2_16.png" />
+    <None Include="Resources\agregar_mi1_32.png" />
+    <None Include="Resources\salvar_32.png" />
+    <None Include="Resources\salvar_16.png" />
+    <None Include="Resources\deshacer_16.png" />
+    <None Include="Resources\deshacer_32.png" />
+    <None Include="Resources\buscar_32.png" />
+    <None Include="Resources\buscar_16.png" />
+    <None Include="Resources\agregar_paciente_16.png" />
+    <None Include="Resources\editar_paciente_16.png" />
+    <None Include="Resources\eliminar_paciente_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\medicine_avatar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\medicine_avatar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checkmark_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checkmark_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\medicalrecord_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\listicon_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editlock_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chart_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cog_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\house_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\export_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="COVID19_Icon.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
